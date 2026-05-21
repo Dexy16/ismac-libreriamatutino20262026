@@ -7,3 +7,4 @@ public interface ClienteDAO extends JpaRepository<Cliente,  Integer> {
 }
 //comentarios para git hub
 //alcivar
+//conectar para github para casa
