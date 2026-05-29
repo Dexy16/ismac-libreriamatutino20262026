@@ -53,13 +53,13 @@ public  void save(){
 
 @Test
 public void update(){
-    Optional<Cliente>cliente = clienteDAO.findById(44);
-    assertTrue(cliente.isPresent(),"El cliente con id=44 debe de existir para ser actualizado");
+    Optional<Cliente>cliente = clienteDAO.findById(49);
+    assertTrue(cliente.isPresent(),"El cliente con id=46 debe de existir para ser actualizado");
 
     cliente.orElse(null).setCedula("1701233334");
-    cliente.orElse(null).setNombre("Juand4");
+    cliente.orElse(null).setNombre("Juan4");
     cliente.orElse(null).setApellido("Taipe4");
-    cliente.orElse(null).setTelefono("Av.33");
+    cliente.orElse(null).setDireccion("Av.33");
     cliente.orElse(null).setTelefono("0987654333");
     cliente.orElse(null).setCorreo("jtaipe33@correo.com");
 
@@ -71,10 +71,10 @@ public void update(){
 }
 @Test
     public void delete(){
-        if (clienteDAO.existsById(44)){
-            clienteDAO.deleteById(44);
+        if (clienteDAO.existsById(49)){
+            clienteDAO.deleteById(49);
         }
-        assertFalse(clienteDAO.existsById(44),"El id=44 deberia haberse eliminado");
+        assertFalse(clienteDAO.existsById(49),"El id=46 deberia haberse eliminado");
 
 }
 
